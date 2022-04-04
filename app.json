@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "legacy-react-native-app",
+    "slug": "legacy-react-native-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "legacy-react-native-app"
+}
