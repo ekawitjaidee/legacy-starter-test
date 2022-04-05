@@ -4,7 +4,7 @@ import { ThemeProvider, Button, Input, Image } from 'react-native-elements'
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-export default function ScanButton() {
+export default function ScanButton({ navigation}) {
   return (
           <Button
             style={style.scanbutton}
@@ -12,7 +12,7 @@ export default function ScanButton() {
               <Icon name='scan-helper' size={15} color='white' />
             }
             title='    Scan Code'
-            // onPress={()=> this.props.navigation.navigate('UserScreen')}
+            onPress={()=> navigation.navigate('ForwardHistory')}
             containerStyle={{
               width: '50%',
               borderRadius: 8,

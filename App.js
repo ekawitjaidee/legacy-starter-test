@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import forwardPickup from './screens/forward-pickup'
+import forwardSending from './screens/forward-sending'
+import forwardHistory from './screens/forward-history'
 
 const Stack = createStackNavigator();
 
@@ -25,9 +27,17 @@ function MyStack() {
     >
 
       <Stack.Screen
-        name="Forward"
+        name="ForwardPickup"
         component={forwardPickup}
-        option={{ title: 'Forward' }} />
+        options={{ title: 'Forward' }} />
+      <Stack.Screen
+        name="ForwardSending"
+        component={forwardSending}
+        options={{ title: 'Forward' }} />
+      <Stack.Screen
+        name="ForwardHistory"
+        component={forwardHistory}
+        options={{ title: 'Forward' }} />
     </Stack.Navigator>
   )
 }
