@@ -7,28 +7,24 @@ import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import ProductWaiting from '../component/product-waiting'
 import ScanButton from '../component/scan-button'
-import ForwardHeader from '../component/forward-hearder'
 
 export default function ForwardPickup({ navigation }) {
 
   const [page,setPage] = useState(0)
 
   return (
-    <ThemeProvider theme={theme}>
-      <ForwardHeader navigation={navigation} page={page}/>
       <ScrollView style={style.container}>
         <View style={{ alignItems: 'center', paddingTop: 20 }}>
-          <ScanButton navigation={navigation}/>
+          <ScanButton navigation={navigation} buttonWidth={"50%"}/>
         </View>
         <Text style={{ marginTop: 15, color: '#808080' }}>รายการสินค้ารอรับเข้า</Text>
-        <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
+        <ProductWaiting navigation={navigation} name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <View style={{ paddingTop: 20 }} />
       </ScrollView>
-    </ThemeProvider>
   );
 }
 

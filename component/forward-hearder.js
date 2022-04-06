@@ -4,9 +4,8 @@ import { ThemeProvider, Button, Input, Image } from 'react-native-elements'
 
 
 
-export default function ForwardHeader({ navigation, page }) {
+export default function ForwardHeader({ navigation, page ,setPage}) {
 
-  const [selectpage, setSelectpage] = useState(0)
   if (page == 0 ){
     return (
       <View>
@@ -14,11 +13,11 @@ export default function ForwardHeader({ navigation, page }) {
           <TouchableOpacity style={style.selected} >
             <Text style={{ color: "#97D700" }}>รับสินค้า</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style.unselectedmid} onPress={() => navigation.navigate('ForwardSending')}>
-            <Text>ส่งต่อสินค้า</Text>
+          <TouchableOpacity style={style.unselectedmid} onPress={() => setPage(1)}>
+            <Text style={{ color: "#000000" }}>ส่งต่อสินค้า</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style.unselected} onPress={() => navigation.navigate('ForwardHistory')}>
-            <Text>ประวัติ</Text>
+          <TouchableOpacity style={style.unselected} onPress={() => setPage(2)}>
+            <Text style={{ color: "#000000" }}>ประวัติ</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -27,14 +26,14 @@ export default function ForwardHeader({ navigation, page }) {
     return (
       <View>
         <View style={style.headerbar}>
-          <TouchableOpacity style={style.unselected} onPress={() => navigation.navigate('ForwardPickup')}>
-            <Text>รับสินค้า</Text>
+          <TouchableOpacity style={style.unselected} onPress={() => setPage(0)}>
+            <Text style={{ color: "#000000" }}>รับสินค้า</Text>
           </TouchableOpacity>
           <TouchableOpacity style={style.selectedmid} >
             <Text style={{ color: "#97D700" }}>ส่งต่อสินค้า</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style.unselected} onPress={() => navigation.navigate('ForwardHistory')}>
-            <Text>ประวัติ</Text>
+          <TouchableOpacity style={style.unselected} onPress={() => setPage(2)}>
+            <Text style={{ color: "#000000" }}>ประวัติ</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -44,11 +43,11 @@ export default function ForwardHeader({ navigation, page }) {
     return (
       <View>
         <View style={style.headerbar}>
-          <TouchableOpacity style={style.unselected} onPress={() => navigation.navigate('ForwardPickup')}>
-            <Text>รับสินค้า</Text>
+          <TouchableOpacity style={style.unselected} onPress={() => setPage(0)}>
+            <Text style={{ color: "#000000" }}>รับสินค้า</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style.unselectedmid} onPress={() => navigation.navigate('ForwardSending')}>
-            <Text>ส่งต่อสินค้า</Text>
+          <TouchableOpacity style={style.unselectedmid} onPress={() => setPage(1)}>
+            <Text style={{ color: "#000000" }}>ส่งต่อสินค้า</Text>
           </TouchableOpacity>
           <TouchableOpacity style={style.selected} >
             <Text style={{ color: "#97D700" }}>ประวัติ</Text>

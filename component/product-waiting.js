@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { StyleSheet, ScrollView, ActivityIndicator, View, Text } from 'react-native'
+import { StyleSheet, ScrollView, ActivityIndicator, View, Text, TouchableOpacity } from 'react-native'
 import { ThemeProvider, Button, Input, Image } from 'react-native-elements'
 import Icon2 from 'react-native-vector-icons/Entypo'
 
 
-export default function ProductWaiting({name,date,time,listcount}) {
+export default function ProductWaiting({ navigation , name, date, time, listcount }) {
   return (
     <View style={style.productwaiting}>
-      <View style={{ padding: 10,flexDirection: 'row', alignItems: 'stretch' }}>
+      <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
         <View style={{ paddingHorizontal: 5, width: '13%' }}>
           <Image
             source={{ uri: 'https://cdn-icons-png.flaticon.com/512/219/219986.png' }}
@@ -39,10 +39,10 @@ export default function ProductWaiting({name,date,time,listcount}) {
           <Text>{date}</Text>
           <Text>{time}</Text>
         </View>
-        <View style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 5, width: '60%', justifyContent: 'flex-end' }}>
-          <Text style={{ color: '#97D700', textAlign: 'center' }}>รับเข้าสินค้า </Text>
-          <Icon2 name='chevron-thin-right' size={15} color='#97D700' />
-        </View>
+        <TouchableOpacity style={{flexDirection: 'row',flex: 1,  paddingHorizontal: 5, width: '60%', justifyContent: 'flex-end'}} onPress={() => navigation.navigate("Pickup")}>
+            <Text style={{ color: '#97D700', textAlign: 'center' }}>รับเข้าสินค้า </Text>
+            <Icon2 name='chevron-thin-right' size={15} color='#97D700' style={{alignSelf:"center"}} />
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -5,9 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import forwardPickup from './screens/forward-pickup'
-import forwardSending from './screens/forward-sending'
-import forwardHistory from './screens/forward-history'
+import Forward from './screens/forward'
+import Pickup from './screens/pickup'
 
 const Stack = createStackNavigator();
 
@@ -15,9 +14,9 @@ function MyStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerStyle: {
-          backgroundColor: '#FFFFFF'
-        },
+        // headerStyle: {
+        //   backgroundColor: '#FFFFFF'
+        // },
         headerTintColor: "#000000",
         headerTitleStyle: {
           fontWeight: 'bold'
@@ -27,17 +26,15 @@ function MyStack() {
     >
 
       <Stack.Screen
-        name="ForwardPickup"
-        component={forwardPickup}
+        name="Forward"
+        component={Forward}
         options={{ title: 'Forward' }} />
-      <Stack.Screen
-        name="ForwardSending"
-        component={forwardSending}
-        options={{ title: 'Forward' }} />
-      <Stack.Screen
-        name="ForwardHistory"
-        component={forwardHistory}
-        options={{ title: 'Forward' }} />
+      <Stack.Screen 
+        name="Pickup"
+        component={Pickup}
+        options={{ title: 'รับสินค้า'}}
+        headerStyle={{backgroundColor:"red"}}
+      />
     </Stack.Navigator>
   )
 }
