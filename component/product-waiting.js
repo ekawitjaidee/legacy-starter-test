@@ -18,10 +18,10 @@ export default function ProductWaiting({ navigation , name, date, time, listcoun
         <View style={{ paddingHorizontal: 5, width: '87%' }}>
           <Text style={{ fontSize: 12, color: '#808080' }}>ผู้ส่ง :</Text>
           <View style={{ flex: 1, flexDirection: 'row', alignItems: 'space-between', justifyContent: 'space-between' }}>
-            <View style={{}}>
+            <View>
               <Text style={{ flex: 1, fontSize: 13, fontWeight: "bold" }} >{name}</Text>
             </View>
-            <View style={{}}>
+            <View>
               <Text style={{ flex: 1, fontSize: 9, justifyContent: 'flex-end', color: '#CCCCCC' }} >({listcount} รายการ)</Text>
             </View>
           </View>

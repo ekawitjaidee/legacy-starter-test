@@ -17,7 +17,7 @@ export default function ForwardPickup({ navigation }) {
         <View style={{ alignItems: 'center', paddingTop: 20 }}>
           <ScanButton navigation={navigation} buttonWidth={"50%"}/>
         </View>
-        <Text style={{ marginTop: 15, color: '#808080' }}>รายการสินค้ารอรับเข้า</Text>
+        <Text style={{ marginTop: 15, color: '#808080', fontWeight: "bold" }}>รายการสินค้ารอรับเข้า</Text>
         <ProductWaiting navigation={navigation} name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
         <ProductWaiting name={'ดวงพร ใจกล้า'} date={'14/01/1999'} time={'11.00'} listcount={'4'} />
