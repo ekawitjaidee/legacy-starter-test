@@ -11,6 +11,7 @@ export default function Pickup({ navigation }) {
 
   return (
     <ThemeProvider theme={theme}>
+      {/* Start modal */}
       <Modal
         animationType="none"
         transparent={true}
@@ -30,7 +31,7 @@ export default function Pickup({ navigation }) {
                   borderBottomWidth: 1,
                 }}
               />
-              <View style={{ weight: "100%", backgroundColor: "#E9E9E9",marginTop:5 }}>
+              <View style={{ weight: "100%", backgroundColor: "#E9E9E9",marginTop:10 }}>
                 <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
                   <View style={{ width: '25%' }}>
                     <Image
@@ -76,7 +77,7 @@ export default function Pickup({ navigation }) {
           </View>
         </View>
       </Modal>
-
+      {/* Stop Modal */}
       <View style={{ marginTop: 10, paddingHorizontal: 10 }}>
         <View style={{ backgroundColor: "#FFFFFF", borderRadius: 10 }} elevation={10}>
           <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
@@ -114,7 +115,7 @@ export default function Pickup({ navigation }) {
         <View style={{ marginTop: 15 }}>
           <Text style={{ alignSelf: "flex-end" }}>(สินค้าที่ส่งมาทั้งหมด 4 รายการ)</Text>
         </View>
-        <View style={{ backgroundColor: "#FFFFFF", borderRadius: 10, marginTop: 10 }}>
+        <ScrollView style={{ backgroundColor: "#FFFFFF", borderRadius: 10, marginTop: 10 }}>
           <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
             <View style={{ paddingHorizontal: 5, width: '20%' }}>
               <Image
@@ -123,7 +124,7 @@ export default function Pickup({ navigation }) {
                 containerStyle={{}}
               />
             </View>
-            <View style={{ width: '50%' }}>
+            <View style={{ width: '60%' }}>
               <View style={{ flexDirection: 'row' }}>
                 <View>
                   <Text style={{ fontSize: 13, color: '#000000' }}>CODE : TH1054</Text>
@@ -140,7 +141,7 @@ export default function Pickup({ navigation }) {
                 </View>
               </View>
             </View>
-            <View style={{ width: '25%', justifyContent: 'center' }}>
+            <View style={{ width: '15%', justifyContent: 'center' }}>
               <Icon name="check-circle" size={35} color='#CCCCCC' style={{ alignSelf: "center" }} />
             </View>
             <Pressable
@@ -150,7 +151,7 @@ export default function Pickup({ navigation }) {
               <Icon2 name="close" size={15} color='#CCCCCC' style={{ alignSelf: "center" }} />
             </Pressable>
           </View>
-        </View>
+        </ScrollView>
       </View>
     </ThemeProvider>
   );
@@ -186,7 +187,7 @@ const styles = StyleSheet.create({
     marginTop: '50%',
     marginHorizontal: "13%",
     backgroundColor: "white",
-    borderRadius: 20,
+    borderRadius: 10,
     paddingTop: 20,
     
     // paddingHorizontal:"5%",

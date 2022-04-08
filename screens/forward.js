@@ -13,8 +13,7 @@ export default function Forward({ navigation }) {
   return (
     <ThemeProvider theme={theme}>
       <ForwardHeader navigation={navigation} page={page} setPage={setPage}/>
-      {page == 0 ?(
-        
+      {page == 0 ?( 
         <ForwardPickup navigation={navigation}/>
       ):(
         page == 1 ?(
@@ -22,8 +21,7 @@ export default function Forward({ navigation }) {
         ):(
           <ForwardHistory navigation={navigation}/>
         )
-      )
-      
+      ) 
     }
     </ThemeProvider>
   );
