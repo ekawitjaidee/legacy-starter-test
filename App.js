@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Forward from './screens/forward'
 import Pickup from './screens/pickup'
+import QrcodeScan from './screens/qrcode-scan'
 
 const Stack = createStackNavigator();
 
@@ -29,11 +30,14 @@ function MyStack() {
         name="Forward"
         component={Forward}
         options={{ title: 'Forward' }} />
+      <Stack.Screen
+        name="QrcodeScan"
+        component={QrcodeScan}
+        options={{ title: 'Qrcode' }} />
       <Stack.Screen 
         name="Pickup"
         component={Pickup}
         options={{ title: 'รับสินค้า'}}
-        headerStyle={{backgroundColor:"red"}}
       />
     </Stack.Navigator>
   )
