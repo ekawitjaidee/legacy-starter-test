@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import Icon2 from 'react-native-vector-icons/AntDesign'
 
 
-export default function PickupItems({ navigation, code, itemname, serialno }) {
+export default function PickupItems({ navigation, code, itemname, serialno , setModalVisible}) {
 
 
   return (

@@ -6,13 +6,12 @@ import Icon2 from 'react-native-vector-icons/Entypo'
 
 export default function ProductWaiting({ navigation , name, date, time, listcount }) {
   return (
-    <View style={style.productwaiting}>
+    <View style={styles.productwaiting}>
       <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
         <View style={{ paddingHorizontal: 5, width: '13%' }}>
           <Image
             source={{ uri: 'https://cdn-icons-png.flaticon.com/512/219/219986.png' }}
-            style={style.image}
-            containerStyle={{}}
+            style={styles.image}
           />
         </View>
         <View style={{ paddingHorizontal: 5, width: '87%' }}>
@@ -48,7 +47,7 @@ export default function ProductWaiting({ navigation , name, date, time, listcoun
   );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
 
   productwaiting: {
     backgroundColor: '#FFFFFF',

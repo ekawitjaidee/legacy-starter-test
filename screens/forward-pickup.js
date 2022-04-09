@@ -13,7 +13,7 @@ export default function ForwardPickup({ navigation }) {
   const [page,setPage] = useState(0)
 
   return (
-      <ScrollView style={style.container}>
+      <ScrollView style={styles.container}>
         <View style={{ alignItems: 'center', paddingTop: 20 }}>
           <ScanButton navigation={navigation} buttonWidth={"50%"}/>
         </View>
@@ -35,7 +35,7 @@ const theme = {
   }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
