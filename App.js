@@ -5,9 +5,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
+import selectReceiver from './screens/select-receiver'
 import Forward from './screens/forward'
 import Pickup from './screens/pickup'
+import Sending from './screens/sending'
 import QrcodeScan from './screens/qrcode-scan'
+import ForwardProduct from './screens/forward-product'
 
 const Stack = createStackNavigator();
 
@@ -37,8 +40,19 @@ function MyStack() {
       <Stack.Screen 
         name="Pickup"
         component={Pickup}
-        options={{ title: 'รับสินค้า'}}
-      />
+        options={{ title: 'รับสินค้า'}} />
+      <Stack.Screen 
+        name="Sending"
+        component={Sending}
+        options={{ title: 'ส่งต่อสินค้า'}} />
+      <Stack.Screen 
+        name="SelectReceiver"
+        component={selectReceiver}
+        options={{ title: 'เลือกผู้รับสินค้า' }} />
+      <Stack.Screen 
+        name="ForwardProduct"
+        component={ForwardProduct}
+        options={{ title: 'ส่งต่อสินค้า' }} />
     </Stack.Navigator>
   )
 }

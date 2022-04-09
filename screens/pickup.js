@@ -119,13 +119,13 @@ function ModalDeleteItem({ modalVisible, setModalVisible }) {
             </View>
             <View style={{ flexDirection: 'row', marginTop: 10 }}>
               <Pressable
-                style={{ width: '50%', height: 75, justifyContent: "center", borderRightWidth: 1, borderTopWidth: 1, borderColor: "#E9E9E9" }}
+                style={{ width: '50%', height: 50, justifyContent: "center", borderRightWidth: 1, borderTopWidth: 1, borderColor: "#E9E9E9" }}
                 onPress={() => setModalVisible(!modalVisible)}
               >
                 <Text style={styles.textStyle}>ลบ</Text>
               </Pressable>
               <Pressable
-                style={{ width: '50%', height: 75, justifyContent: "center", borderLeftWidth: 1, borderTopWidth: 1, borderColor: "#E9E9E9" }}
+                style={{ width: '50%', height: 50, justifyContent: "center", borderLeftWidth: 1, borderTopWidth: 1, borderColor: "#E9E9E9" }}
                 onPress={() => setModalVisible(!modalVisible)}
               >
                 <Text style={styles.textStyle}>ยกเลิก</Text>
