@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import selectReceiver from './screens/select-receiver'
+import SelectReceiver from './screens/select-receiver'
 import Forward from './screens/forward'
 import Pickup from './screens/pickup'
 import Sending from './screens/sending'
@@ -47,7 +47,7 @@ function MyStack() {
         options={{ title: 'ส่งต่อสินค้า'}} />
       <Stack.Screen 
         name="SelectReceiver"
-        component={selectReceiver}
+        component={SelectReceiver}
         options={{ title: 'เลือกผู้รับสินค้า' }} />
       <Stack.Screen 
         name="ForwardProduct"

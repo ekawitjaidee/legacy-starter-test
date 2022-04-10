@@ -9,16 +9,16 @@ export default function Pickup({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
+    <>
+    <ModalDeleteItem modalVisible={modalVisible} setModalVisible={setModalVisible} />
     <ThemeProvider theme={theme}>
-      <ModalDeleteItem modalVisible={modalVisible} setModalVisible={setModalVisible}/>
-      <View style={{ marginTop: 10, paddingHorizontal: 10 }}>
-        <View style={{ backgroundColor: "#FFFFFF", borderRadius: 10 }} elevation={10}>
+      <View style={styles.container}>
+        <View style={styles.headerbody} elevation={10}>
           <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
             <View style={{ paddingHorizontal: 5, width: '13%' }}>
               <Image
                 source={{ uri: 'https://cdn-icons-png.flaticon.com/512/219/219986.png' }}
                 style={styles.image}
-                containerStyle={{}}
               />
             </View>
             <View style={{ width: '40%' }}>
@@ -39,7 +39,7 @@ export default function Pickup({ navigation }) {
                 </View>
               </View>
             </View>
-            <View style={{ borderLeftWidth: 1, borderColor: '#E9E9E9', marginVertical: 5, width: '1%' }}></View>
+            <View style={styles.verticalHr}></View>
             <View style={{ paddingLeft: 5, width: '46%' }}>
               <ScanButton navigation={navigation} buttonWidth={'100%'} />
             </View>
@@ -50,17 +50,18 @@ export default function Pickup({ navigation }) {
         </View>
         <ScrollView>
           {/*  Pickup Items Code , Name , Serial Number*/}
-          <PickupItems code={'TH1054'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1055'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1056'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1057'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1058'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1059'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1060'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
-          <PickupItems code={'TH1061'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible}/>
+          <PickupItems code={'TH1054'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1055'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1056'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1057'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1058'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1059'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1060'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
+          <PickupItems code={'TH1061'} itemname={'เอฟ แอล กลิ่นสับปะรดมะนาว'} serialno={'129488800002'} setModalVisible={setModalVisible} />
         </ScrollView>
       </View>
     </ThemeProvider>
+    </>
   );
 }
 
@@ -146,11 +147,24 @@ const theme = {
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    marginTop: 10,
+    paddingHorizontal: 10
+  },
+  headerbody: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 10
+  },
   senderTab: {
     backgroundColor: '#FFFFFF',
     marginTop: 10,
     borderRadius: 3
+  },
+  verticalHr: {
+    borderLeftWidth: 1,
+    borderColor: '#E9E9E9',
+    marginVertical: 5,
+    width: '1%'
   },
   image: {
     width: 35,
@@ -171,16 +185,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     paddingTop: 20,
-
-    // paddingHorizontal:"5%",
     alignItems: "center",
-    // shadowColor: "#000",
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2
-    // },
-    // shadowOpacity: 0.25,
-    // shadowRadius: 4,
   },
   button: {
     borderRadius: 20,

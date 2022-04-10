@@ -12,7 +12,7 @@ export default function ScanButton({ navigation , buttonWidth}) {
               <Icon name='scan-helper' size={15} color='white' />
             }
             title='    Scan Code'
-            onPress={()=> navigation.navigate('QrcodeScan')}
+            onPress={()=> navigation.navigate('QrcodeScan')} 
             containerStyle={{
               width: buttonWidth,
               borderRadius: 8,

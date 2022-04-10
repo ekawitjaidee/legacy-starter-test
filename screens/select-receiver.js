@@ -6,7 +6,7 @@ import Icon2 from 'react-native-vector-icons/AntDesign'
 
 import Receiver from '../component/receiver'
 
-export default function selectReceiver({ navigation }) {
+export default function SelectReceiver({ navigation }) {
 
     const [fav, setFav] = useState(0)
     const [search, setSearch] = useState('')

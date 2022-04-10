@@ -7,7 +7,7 @@ import Icon2 from 'react-native-vector-icons/Entypo'
 export default function ProductWaiting({ navigation , name, date, time, listcount }) {
   return (
     <View style={styles.productwaiting}>
-      <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
+      <View style={styles.topbody}>
         <View style={{ paddingHorizontal: 5, width: '13%' }}>
           <Image
             source={{ uri: 'https://cdn-icons-png.flaticon.com/512/219/219986.png' }}
@@ -26,13 +26,8 @@ export default function ProductWaiting({ navigation , name, date, time, listcoun
           </View>
         </View>
       </View>
-      <View
-        style={{
-          borderBottomColor: '#E9E9E9',
-          borderBottomWidth: 1,
-        }}
-      />
-      <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
+      <View style={styles.hr}/>
+      <View style={styles.bottombody}>
         <View style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 5, width: '40%', alignItems: 'space-between', justifyContent: 'space-between' }}>
           <Text style={{ color: '#808080' }}>วันที่ส่ง :</Text>
           <Text>{date}</Text>
@@ -60,5 +55,19 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderColor: '#000000',
     borderWidth: 1
+  },
+  topbody:{
+    padding: 10, 
+    flexDirection: 'row', 
+    alignItems: 'stretch'
+  },
+  bottombody:{
+    padding: 10, 
+    flexDirection: 'row', 
+    alignItems: 'stretch'
+  },
+  hr:{
+    borderBottomColor: '#E9E9E9',
+    borderBottomWidth: 1,
   }
 })

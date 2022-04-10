@@ -10,7 +10,7 @@ import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'
 export default function HistoryInput({ status, setStatus }) {
 
   return (
-    <View style={{ weight: "100%", backgroundColor: "#FFFFFF", margin: 15, borderRadius: 10 }}>
+    <View style={styles.container}>
       <View style={{ flexDirection: 'row' }}>
         {status == "sending" ? (
           <>
@@ -51,13 +51,7 @@ export default function HistoryInput({ status, setStatus }) {
           <Icon2 name='scan-helper' size={20} color='#808080' />
         </View>
       </View>
-      <View
-        style={{
-          borderBottomColor: '#E9E9E9',
-          borderBottomWidth: 1,
-          marginVertical: 10
-        }}
-      />
+      <View style={ styles.hr }/>
       <View style={{ paddingVertical: 10, paddingHorizontal: 15, flexDirection: "row" }}>
         <View style={{ width: "50%" }}>
           <Text>วันที่</Text>
@@ -90,13 +84,12 @@ export default function HistoryInput({ status, setStatus }) {
   );
 }
 
-const theme = {
-  Button: {
-    raised: true,
-  }
-}
-
 const styles = StyleSheet.create({
+  container:{
+    backgroundColor: "#FFFFFF", 
+    margin: 15, 
+    borderRadius: 10
+  },
   statusButton: {
     width: '50%',
     height: 60,
@@ -121,5 +114,10 @@ const styles = StyleSheet.create({
   },
   TopRightAngleRadius: {
     borderTopRightRadius: 10
+  },
+  hr:{
+    borderBottomColor: '#E9E9E9',
+    borderBottomWidth: 1,
+    marginVertical: 10
   }
 })

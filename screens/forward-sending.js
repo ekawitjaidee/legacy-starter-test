@@ -8,7 +8,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function ForwardSending({ navigation }) {
     return (
-        <ThemeProvider theme={theme}>
             <ScrollView style={styles.container}>
                 <View style={styles.box}>
                     <View style={{ borderLeftWidth: 5, borderColor: '#97D700', paddingLeft: 5 }}><Text>กรุณาเลือกผู้รับสินค้า</Text></View>
@@ -26,15 +25,7 @@ export default function ForwardSending({ navigation }) {
                         style={{ borderBottomColor: '#E9E9E9', borderBottomWidth: 1, padding: 5 }} />
                 </View>
             </ScrollView>
-        </ThemeProvider>
     );
-}
-
-
-const theme = {
-    Button: {
-        raised: true
-    }
 }
 
 const styles = StyleSheet.create({
@@ -47,14 +38,5 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 5,
         paddingBottom: 40
-    },
-    preloader: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        alignItems: 'center',
-        justifyContent: 'center'
     },
 })

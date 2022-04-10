@@ -8,8 +8,8 @@ import Icon2 from 'react-native-vector-icons/Entypo'
 export default function HistoryItems({ code, itemname, serialno, recieverId, recieverName, date, itemstatus , status}) {
 
   return (
-    <View style={{ weight: "100%", backgroundColor: "#FFFFFF", margin: 15, borderRadius: 10 }}>
-      <View style={{ padding: 10, flexDirection: 'row', alignItems: 'stretch' }}>
+    <View style={styles.container}>
+      <View style={styles.topbody}>
         <View style={{ paddingHorizontal: 5, width: '20%' }}>
           <Image
             source={{ uri: 'https://cdn-icons-png.flaticon.com/512/219/219986.png' }}
@@ -35,13 +35,8 @@ export default function HistoryItems({ code, itemname, serialno, recieverId, rec
           </View>
         </View>
       </View>
-      <View
-        style={{
-          borderBottomColor: '#E9E9E9',
-          borderBottomWidth: 1,
-        }}
-      />
-      <View style={{ flexDirection: "row", padding: 15 }}>
+      <View style={styles.hr}/>
+      <View style={styles.bottombody}>
         <View style={{ width: '60%' }}>
           <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ width: "15%" }}>
@@ -64,7 +59,6 @@ export default function HistoryItems({ code, itemname, serialno, recieverId, rec
           </View>
         </View>
         {status == 'sending'?
-
         <ItemsStatusSend itemstatus={itemstatus} />
         :
         <ItemsStatusReceive itemstatus={itemstatus} />
@@ -126,11 +120,29 @@ function ItemsStatusReceive({ itemstatus }) {
 }
 
 const styles = StyleSheet.create({
+  container:{
+    backgroundColor: "#FFFFFF", 
+    margin: 15, 
+    borderRadius: 10
+  },
+  topbody:{
+    padding: 10, 
+    flexDirection: 'row', 
+    alignItems: 'stretch'
+  },
+  bottombody:{
+    flexDirection: "row", 
+    padding: 15
+  },
   image: {
     width: 50,
     height: 50,
     borderColor: '#000000',
     borderWidth: 1
+  },
+  hr:{
+    borderBottomColor: '#E9E9E9',
+    borderBottomWidth: 1,
   },
 
 })

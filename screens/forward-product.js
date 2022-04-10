@@ -4,38 +4,42 @@ import { ThemeProvider, Button, Input, Image } from 'react-native-elements'
 
 
 
-export default function forwardProduct({ navigation }) {
+export default function ForwardProduct() {
     return (
         <ThemeProvider theme={theme}>
             <ScrollView style={styles.container}>
                 <View style={styles.box}>
                     <Text style={styles.textcaution}>กรุณาตรวจสอบข้อมูลการส่งต่อสินค้าของท่าน</Text>
                     <Text style={styles.textcaution}>หากยืนยันแล้ว จะไม่สามารถแก้ไขรายการได้</Text>
-                    <Text style={{ fontSize: 12, color: '#4D4D4D', paddingTop: 20 }}>ผู้รับสินค้า :110000045 ธนะวัฒน์ โสภานกุล</Text>
+                    <View style={{ flexDirection: 'row' }}>
+                        <View style={{ width: '20%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={styles.textfisrtrow}>ผู้รับสินค้า</Text><Text style={styles.textfisrtrow}>:</Text>
+                        </View>
+                        <Text style={styles.textfisrtrow}>110000045 ธนะวัฒน์ โสภานกุล</Text>
+                    </View>
                     <View
                         style={{ borderBottomColor: '#E9E9E9', borderBottomWidth: 1, padding: 10 }} />
-                    <Text style={{ fontSize: 12, color: '#4D4D4D', paddingTop: 20 }}>ผู้ส่งสินค้า :ธนพล ศรีธนะชัย</Text>
-                    <Text style={{ fontSize: 12, color: '#4D4D4D', paddingTop: 5 }}>วันที่ส่ง :05/12/2020  13:09</Text>
+                    <View style={{ flexDirection: 'row' }}>
+                        <View style={{ width: '20%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={styles.textfisrtrow}>ผู้ส่งสินค้า</Text><Text style={styles.textfisrtrow}>:</Text>
+                        </View>
+                        <Text style={styles.textfisrtrow}>ธนพล ศรีธนะชัย</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <View style={{ width: '20%', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={styles.textsecondrow}>วันที่ส่ง</Text><Text style={styles.textsecondrow}>:</Text>
+                        </View>
+                        <Text style={styles.textsecondrow}>05/12/2020  13:09</Text>
+                    </View>
                     <View
                         style={{ borderBottomColor: '#E9E9E9', borderBottomWidth: 1, padding: 10 }} />
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 20 }}>
                         <Text style={{ fontSize: 12, color: '#4D4D4D' }}>สินค้าทั้งหมด :</Text>
                         <Text style={{ fontSize: 10, color: '#4D4D4D' }}>(1 รายการ)</Text>
                     </View>
+
                 </View>
             </ScrollView>
-            <View style={{ height: "12%", alignItems: "center", alignContent: "flex-end", marginTop: 9 }}>
-                <Button title='ยืนยัน'
-                    containerStyle={{
-                        width: '50%',
-                        borderRadius: 18,
-                    }}
-                    buttonStyle={{
-                        backgroundColor: '#97D700',
-                    }}
-                    onPress={() => navigation.navigate("Forward")}
-                ></Button>
-            </View>
         </ThemeProvider>
     );
 }
@@ -71,8 +75,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 5,
     },
-    textsendreceive: {
+    textfisrtrow: {
         fontSize: 12,
-        color: '#4D4D4D'
-    }
+        color: '#4D4D4D',
+        paddingTop: 20
+    },
+    textsecondrow: {
+        fontSize: 12,
+        color: '#4D4D4D',
+        paddingTop: 5
+    },
 })
