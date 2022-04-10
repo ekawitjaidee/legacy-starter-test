@@ -18,9 +18,6 @@ function MyStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerStyle: {
-        //   backgroundColor: '#FFFFFF'
-        // },
         headerTintColor: "#000000",
         headerTitleStyle: {
           fontWeight: 'bold'
@@ -40,15 +37,15 @@ function MyStack() {
       <Stack.Screen 
         name="Pickup"
         component={Pickup}
-        options={{ title: 'รับสินค้า'}} />
+        options={{ title: 'รับสินค้า',headerStyle:{backgroundColor:"transparent"}}} />
       <Stack.Screen 
         name="Sending"
         component={Sending}
-        options={{ title: 'ส่งต่อสินค้า'}} />
+        options={{ title: 'ส่งต่อสินค้า',headerStyle:{backgroundColor:"transparent"}}} />
       <Stack.Screen 
         name="SelectReceiver"
         component={SelectReceiver}
-        options={{ title: 'เลือกผู้รับสินค้า' }} />
+        options={{ title: 'เลือกผู้รับสินค้า' ,headerStyle:{backgroundColor:"transparent"}}} />
       <Stack.Screen 
         name="ForwardProduct"
         component={ForwardProduct}

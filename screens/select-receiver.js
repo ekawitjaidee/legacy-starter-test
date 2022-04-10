@@ -15,12 +15,12 @@ export default function SelectReceiver({ navigation }) {
         <ThemeProvider theme={theme}>
             <ScrollView style={styles.container}>
                 <View style={styles.textbox}>
-                    <Icon name='search' size={15} color='#808080' />
+                    <Icon style={{alignSelf:"center"}} name='search' size={15} color='#808080' />
                     <TextInput
                         onChangeText={text => setSearch(text)}
                         value={search}
                         placeholder='ค้นหา รหัส / ชื่อ - นามสกุล' />
-                    <TouchableOpacity onPress={() => setSearch('')}><Icon2 name='closecircle' size={15} color='#CCCCCC' /></TouchableOpacity>
+                    <TouchableOpacity style={{alignSelf:"center"}} onPress={() => setSearch('')}><Icon2 name='closecircle' size={15} color='#CCCCCC' /></TouchableOpacity>
                 </View>
                 <Receiver id={"110000002"} name={"ธนะวัฒน์ โสภานกุล"} po={"DD"} fav={0} navigation={navigation} />
                 <Receiver id={"110000032"} name={"ธนพล ไทยวิทวัส"} po={"CAP"} fav={0} navigation={navigation} />
@@ -42,7 +42,8 @@ const theme = {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20
+        padding: 20,
+        backgroundColor: '#FFFFFF',
     },
     box: {
         backgroundColor: '#FFFFFF',
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     textbox: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#F2F2F2',
         padding: 10,
         borderRadius: 5,
         justifyContent: 'space-between',

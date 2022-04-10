@@ -24,7 +24,7 @@ export default function HistoryInput({ status, setStatus }) {
               style={[styles.statusButton, styles.TopRightAngleRadius]}
               onPress={() => setStatus('receive')}
             >
-              <Text style={{ color: "#000000" }}>สถานะการรับ</Text>
+              <Text style={{ color: "#CCCCCC" }}>สถานะการรับ</Text>
             </Pressable>
           </>
         ) : (
@@ -33,7 +33,7 @@ export default function HistoryInput({ status, setStatus }) {
                 style={[styles.statusButton, styles.TopLeftAngleRadius]}
                 onPress={() => setStatus('sending')}
               >
-                <Text style={{ color: "#000000" }}>สถานะการส่ง</Text>
+                <Text style={{ color: "#CCCCCC" }}>สถานะการส่ง</Text>
               </Pressable>
               <Pressable
                 style={[styles.statusButtonOnclick, styles.TopRightAngleRadius]}
@@ -54,7 +54,7 @@ export default function HistoryInput({ status, setStatus }) {
       <View style={ styles.hr }/>
       <View style={{ paddingVertical: 10, paddingHorizontal: 15, flexDirection: "row" }}>
         <View style={{ width: "50%" }}>
-          <Text>วันที่</Text>
+          <Text style={{ color:"#808080"}}>วันที่</Text>
         </View>
         <View style={{ width: "50%", alignItems: "flex-end" }}>
           <Text>15/09/2020 - 15/12/2020</Text>
@@ -62,7 +62,7 @@ export default function HistoryInput({ status, setStatus }) {
       </View>
       <View style={{ paddingVertical: 15, paddingHorizontal: 15, flexDirection: "row" }}>
         <View style={{ width: "50%" }}>
-          <Text>ประเภท</Text>
+          <Text style={{ color:"#808080"}}>ประเภท</Text>
         </View>
         {status == "sending" ? (
           <Picker style={{ height: 20, width: "50%", alignItems: "flex-end" }}>

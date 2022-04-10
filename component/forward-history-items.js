@@ -20,12 +20,12 @@ export default function HistoryItems({ code, itemname, serialno, recieverId, rec
         <View style={{ width: '60%' }}>
           <View style={{ flexDirection: 'row' }}>
             <View>
-              <Text style={{ fontSize: 13, color: '#000000' }}>CODE : {code}</Text>
+              <Text style={{ fontSize: 13, color: '#000000', fontWeight:"bold" }}>CODE : {code}</Text>
             </View>
           </View>
           <View style={{ flexDirection: 'row' }}>
             <View>
-              <Text style={{ fontSize: 13, color: '#000000' }}>{itemname} </Text>
+              <Text style={{ fontSize: 13, color: '#000000' , fontWeight:"bold"}}>{itemname} </Text>
             </View>
           </View>
           <View style={{ paddingTop: 6, flexDirection: 'row' }}>
@@ -40,7 +40,7 @@ export default function HistoryItems({ code, itemname, serialno, recieverId, rec
         <View style={{ width: '60%' }}>
           <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ width: "15%" }}>
-              <Text style={{ fontSize: 12, color: '#808080' }}>ผู้รับ :</Text>
+              <Text style={{ fontSize: 12, color: '#000000' }}>ผู้รับ :</Text>
             </View>
             <View style={{ width: "40%" }}>
               <Text style={{ flex: 1, fontSize: 13 }} >{recieverId}</Text>
@@ -51,7 +51,7 @@ export default function HistoryItems({ code, itemname, serialno, recieverId, rec
           </View>
           <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ width: "15%" }}>
-              <Text style={{ fontSize: 12, color: '#808080' }}>วันที่ : </Text>
+              <Text style={{ fontSize: 12, color: '#000000' }}>วันที่ : </Text>
             </View>
             <View style={{ width: "80%" }}>
               <Text style={{ flex: 1, fontSize: 13 }} >{date}</Text>
